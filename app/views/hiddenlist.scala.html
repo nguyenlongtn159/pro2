@@ -64,8 +64,8 @@ return text.replace('1', 'Học viên');
 @for(account <- currentPage.getList()) { 
  <td>@account.email</td>
 <td>@account.name</td>
-<td class="element"><span>@account.chucvu</span></td>
- <td>@account.description</td></tr>
+<td class="element"><span>@account.tag.id</span></td>
+ <td>@account.description </td></tr>
    }
     </tbody>
   </table>
