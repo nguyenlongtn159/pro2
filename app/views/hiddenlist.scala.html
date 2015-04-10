@@ -35,68 +35,41 @@ Danh sách đăng ký:
         <th>Họ tên</th>
         <th>Vai trò, chức vụ</th>
         <th>Description</th>
-        <th> </th>
       </tr>
     </thead>
     <tbody >
-
-   
-
     <script type="text/javascript">
-
     $(document).ready(function() {
-
-        $(".element span").text(function(index, text) {
-
+       $(".element span").text(function(index, text) {
         return text.replace('3', 'Giáo vụ');
-
         });
-
     });
-
+	
   </script>
      <script type="text/javascript">
-
     $(document).ready(function() {
-
-        $(".element span").text(function(index, text) {
-
-        
+        $(".element span").text(function(index, text) {    
 return text.replace('2', 'Giảng viên');
         });
-
     });
-
   </script>
   
      <script type="text/javascript">
-
     $(document).ready(function() {
-
-        $(".element span").text(function(index, text) {
-
-        
+        $(".element span").text(function(index, text) {       
 return text.replace('1', 'Học viên');
         });
-
     });
-
-  </script>
-
-
+  </script> 
 @for(account <- currentPage.getList()) { 
  <td>@account.email</td>
 <td>@account.name</td>
 <td class="element"><span>@account.chucvu</span></td>
- <td>  @account.description</td>
-        </tr>
-
-    }
-
+ <td>@account.description</td></tr>
+   }
     </tbody>
   </table>
-
-
   <a class="btn" href="@routes.Teachers.details(chanvai)">BACK</a>
-  <br><center> <span class="glyphicon glyphicon-home" aria-hidden="true"></span><a href="@routes.Managers.details(chanvai)"> TRANG CHỦ </a><span class="glyphicon glyphicon-home" aria-hidden="true"></span></center>
+  <br><center> <span class="glyphicon glyphicon-home" aria-hidden="true"></span><a href="@routes.Teachers.details(chanvai)"> TRANG CHỦ </a><span class="glyphicon glyphicon-home" aria-hidden="true"></span></center>
+
 }
